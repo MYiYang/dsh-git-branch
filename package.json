@@ -1,6 +1,6 @@
 {
   "name": "dsh-git-branch-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Shows the current Git branch of the session's project in the DSH composer, lists local and remote branches in a table, switches local branches, and opens a read-only commit graph.",
   "type": "module",
   "main": "index.js",

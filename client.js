@@ -15,7 +15,9 @@
  * up without a reload.
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-git-branch',
+  // Must equal the package name: the Host composes client rows from Loader row
+  // names, and the browser looks the factory up by that same specifier.
+  id: 'dsh-git-branch-plugin',
   factory(require) {
     const React = require('react')
     const h = React.createElement
