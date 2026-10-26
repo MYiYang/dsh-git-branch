@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Git Branch",
+    "description": "Shows the current Git branch of the session's project, lists local and remote branches in a four-column table (remote rows leave the upstream / ahead-behind cells empty), switches local branches, and opens a read-only commit graph."
+  }
+}

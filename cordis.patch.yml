@@ -1,0 +1,13 @@
+# dsh-git-branch-plugin bundle patch.
+#
+# Mounts the package's Host half (the trust-fenced /git-branch/api route that
+# answers the branch chip and performs branch switches) as one Loader row. The
+# package's `dsh.client` declaration makes the Web carrier serve client.js; the
+# bundle patch itself needs no extra row for it.
+#
+# `name` is the module specifier the Loader resolves, so it must stay equal to
+# the published package name (`dsh-git-branch-plugin`), not to the repository or
+# directory name (`dsh-git-branch`).
+- insert:
+    - id: git-branch
+      name: 'dsh-git-branch-plugin'

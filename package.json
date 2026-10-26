@@ -1,0 +1,69 @@
+{
+  "name": "dsh-git-branch-plugin",
+  "version": "0.2.0",
+  "description": "Shows the current Git branch of the session's project in the DSH composer, lists local and remote branches in a table, switches local branches, and opens a read-only commit graph.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "git.js",
+    "graph.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "icon": "./icon.svg",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "test": "node --test test/git.test.js test/graph.test.js test/route.test.js"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "deepseek",
+    "git",
+    "branch",
+    "commit-graph",
+    "composer"
+  ],
+  "license": "MIT",
+  "author": "MYiYang",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MYiYang/dsh-git-branch.git"
+  },
+  "homepage": "https://github.com/MYiYang/dsh-git-branch#readme",
+  "bugs": {
+    "url": "https://github.com/MYiYang/dsh-git-branch/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
